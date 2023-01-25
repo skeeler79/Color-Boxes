@@ -3,8 +3,15 @@ import Box from './Box'
 
 
 class Clicker extends Component {
+    static defaultProps = {
+        numboxes: 18
+    }
   render() {
-    return <div className="Clicker"></div>;
+const boxes = Array.from({length: this.props.numboxes}).map(
+    ()=> <Box />
+)
+
+    return <div className="Clicker">{boxes}</div>;
   }
 }
 
