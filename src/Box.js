@@ -24,24 +24,16 @@ class Box extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { color: "#7d33ff" };
+    this.state = { color: randomizer(this.props.colors) };
     this.handleClick = this.handleClick.bind(this);
   }
 
-  randomColor() {
-    let newColor =
-      randomizer(this.props.colors);
-      
+  
 
-    this.setState((st) => {
-      return {
-        color: newColor,
-      };
-    });
-  }
+    
 
   handleClick() {
-    this.randomColor();
+    randomizer()
   }
 
   render() {
