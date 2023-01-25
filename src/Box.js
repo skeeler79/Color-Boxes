@@ -25,15 +25,27 @@ class Box extends Component {
   constructor(props) {
     super(props);
     this.state = { color: randomizer(this.props.colors) };
+    //setting the color to the randomizer function makes the colors appear randomly on the page upon load
     this.handleClick = this.handleClick.bind(this);
   }
 
-  
+  //the do while loop prevents the same color from being selected in a row
+  getColor(){
+      let newColor 
+      do {
+          newColor = randomizer(this.props.colors);
+      }while (newColor === this.state.color);
 
+      this.setState(st => {
+        return ({
+            color: newColor
+        })
+      })
+  }
     
 
   handleClick() {
-    randomizer()
+    this.getColor();
   }
 
   render() {
