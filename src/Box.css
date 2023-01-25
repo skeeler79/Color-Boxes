@@ -1,0 +1,8 @@
+.Box {
+    width: 200px;
+    height: 200px;
+    margin: 0;
+    /* background-color: #7d33ff; */
+    border: 1px solid black;
+
+}
