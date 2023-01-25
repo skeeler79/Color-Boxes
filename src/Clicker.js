@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Box from './Box'
+import Box from './Box';
+import './Clicker.css'
 
 
 class Clicker extends Component {
